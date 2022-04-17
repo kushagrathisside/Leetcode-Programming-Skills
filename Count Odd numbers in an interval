@@ -1,0 +1,3 @@
+class Solution:
+    def countOdds(self, low: int, high: int) -> int:
+        return sum(divmod(high - low, 2)) + int(low % 2) * int(high % 2)
