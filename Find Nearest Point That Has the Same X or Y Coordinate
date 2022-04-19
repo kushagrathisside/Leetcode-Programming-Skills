@@ -1,0 +1,12 @@
+class Solution:
+    def nearestValidPoint(self, x: int, y: int, points: List[List[int]]) -> int:
+        mini = 100000
+        ind = -1
+        for i in range(len(points)):
+            if x == points[i][0] or y == points[i][1]: 
+                d = abs(x- points[i][0]) + abs(y-points[i][1])
+                if d < mini:
+                    mini = d
+                    ind = i
+        if mini == 100000 : return -1
+        else: return ind
