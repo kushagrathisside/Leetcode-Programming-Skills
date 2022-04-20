@@ -1,0 +1,20 @@
+class Solution:
+    '''
+    def retsq(int n):
+        add=0;
+        while n>0:
+            add=(n%10)*(n%10)+add
+        return add
+    '''
+    def isHappy(self, n: int) -> bool:
+        visited = set()
+        while n != 1:
+            if n in visited:
+                return False
+            visited.add(n)
+            chars = str(n)
+            n = 0
+            for char in chars:
+                n += int(char)**2
+        
+        return True
