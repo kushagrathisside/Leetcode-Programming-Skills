@@ -1,0 +1,11 @@
+class Solution:
+    def areAlmostEqual(self, s1: str, s2: str) -> bool:
+	    first = []
+	    second = []
+
+	    for i in range(len(s1)):
+		    if s1[i] != s2[i]:
+			    first.insert(0, s1[i])
+			    second.append(s2[i])
+
+	    return s1 == s2 or len(first) == 2 and first == second
