@@ -1,0 +1,9 @@
+class Solution:
+    def maximumWealth(self, accounts: List[List[int]]) -> int:
+        max=0
+        for account in accounts:
+            sum=0
+            for i in range(0,len(account)):
+                sum=sum+account[i]
+            if sum>max: max=sum
+        return max
