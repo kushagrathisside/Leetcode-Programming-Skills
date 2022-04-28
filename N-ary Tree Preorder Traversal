@@ -1,0 +1,14 @@
+class Solution {
+public:
+    void prorder(Node* root, vector<int>& v){
+        if(!root) return;
+        v.push_back(root->val);
+        for(Node* rt: root->children) prorder(rt,v);
+    }
+    
+    vector<int> preorder(Node* root) {
+        vector<int> v;
+        prorder(root,v);
+        return v;
+    }
+};
